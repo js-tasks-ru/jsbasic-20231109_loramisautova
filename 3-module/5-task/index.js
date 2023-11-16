@@ -1,9 +1,8 @@
 function getMinMax(str) {
-  let result = {};
-
   let filteredArr = str.split(' ').filter(num => Number(num));
-  result.min = Math.min(...filteredArr);
-  result.max = Math.max(...filteredArr);
 
-  return result;
+  return {
+    min: Math.min(...filteredArr),
+    max: Math.max(...filteredArr)
+  };
 }
