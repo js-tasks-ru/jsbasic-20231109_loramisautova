@@ -19,8 +19,8 @@ function initCarousel() {
     updateButtonVisibility(currenSlide);
   }
 
-  rightButton.addEventListener(('click'), () => shiftSlide(-1));
-  leftButton.addEventListener(('click'), () => shiftSlide(1));
+  rightButton.addEventListener('click', () => shiftSlide(-1));
+  leftButton.addEventListener('click', () => shiftSlide(1));
 
   updateButtonVisibility(0);
 }
