@@ -17,17 +17,19 @@ export default class ProductCard {
       </div>
     </div>
     `);
-    this._container.addEventListener('click', (event) => this.onClick(event));
+    this.addEventListener();
   }
 
   get elem() {
     return this._container;
   }
 
-  onClick(event) {
-    this._container.dispatchEvent(new CustomEvent("product-add", {
-      detail: this.product.id,
-      bubbles: true,
-    }));
+  addEventListener() {
+    this._container.onclick = () => {
+      this._container.dispatchEvent(new CustomEvent("product-add", {
+        detail: this.product.id,
+        bubbles: true,
+      }));
+    };
   }
 }
