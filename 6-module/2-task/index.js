@@ -25,11 +25,11 @@ export default class ProductCard {
   }
 
   addEventListener() {
-    this._container.onclick = () => {
+    this._container.addEventListener('click', () => {
       this._container.dispatchEvent(new CustomEvent("product-add", {
         detail: this.product.id,
         bubbles: true,
       }));
-    };
+    });
   }
 }
