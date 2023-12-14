@@ -53,6 +53,7 @@ export default class UserTable {
     `;
 
     table.addEventListener('click', (e) => this.onDelete(e));
+
     return table;
   }
 
