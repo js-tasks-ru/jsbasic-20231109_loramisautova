@@ -64,7 +64,6 @@ export default class StepSlider {
 
     const approximateValue = leftRelative * this.segments;
     const value = Math.round(approximateValue);
-
     this.setValue(value);
 
     this.elem.dispatchEvent(new CustomEvent('slider-change', {
