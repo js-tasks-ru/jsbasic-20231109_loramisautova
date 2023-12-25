@@ -216,7 +216,7 @@ describe('7-module-4-task', () => {
       pointerMoveClientX = sliderRectLeft + 99;
 
       clickEvent = new MouseEvent('click', { clientX: pointerMoveClientX, bubbles: true });
-    })
+    });
 
     it('должен перемещать ползунок', () => {
       stepSlider.elem.dispatchEvent(clickEvent);
